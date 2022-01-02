@@ -1,0 +1,16 @@
+Def:> file(def-${typename})       // def-link_package.json
+typename : link_package
+fields : {
+    creator : <UCWID>
+    email : <string:<e-mail>>
+    title : <string:[1,256]>
+    subject : <string:[1,256]>
+    keys : [<string:<token>>]
+    txt_full : <string>
+    presentation : <string:<media-specifier>>
+    links : [<string:<URL>>]
+    link_map : { <token> : <string:<URL>> }            // A token provides an binding hint... instantiators use for injesting a link package
+    reverse_link_map : { <string:<URL>> : <token> }     // link package managers may search for a token in a binding given a link as a key...
+}
+inherit : none
+role : base
