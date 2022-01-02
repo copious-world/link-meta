@@ -1,0 +1,16 @@
+{
+    "typename" : "link_package",
+    "fields" : {
+        "creator" : "<UCWID>",
+        "email" : "<string:<e-mail>>",
+        "title" : "<string:[1,256]>",
+        "subject" : "<string:[1,256]>",
+        "keys" : ["<string:<token>>"],
+        "txt_full" : "<string>",
+        "presentation" : "<string:<media-specifier>>",
+        "links" : ["<string:<URL>>"],
+        "link_map" : { "<string:<URL>>" : "<token>" }
+    },
+    "inherit" : "none",
+    "role" : "base"
+}
