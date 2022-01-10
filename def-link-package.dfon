@@ -1,0 +1,23 @@
+Def:> file(def-${typename})       // def-blog_type.json
+typename : blog_type
+fields : #{
+    creator :   <string|<UCWID>>
+    email :     <string|<e-mail>[5,256]>
+    title :     <string|[1,256]>
+    subject :   <string|[1,256]>
+    keys : [<token>]
+    txt_full :  <string>
+}
+inherit : none
+role : base
+
+Def:> file(def-${typename})       // def-link_package.json
+typename : link_package
+fields : #{
+    presentation : <string|<media-specifier>>
+    links : [<string|<URL>>]
+    link_map : { <token> : <string|<URL>> }             // A token provides an binding hint... instantiators use for injesting a link package
+    reverse_link_map : { <string|<URL>> : <token> }     // link package managers may search for a token in a binding given a link as a key...
+}
+inherit : blog_type
+role : impl

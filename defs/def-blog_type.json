@@ -1,0 +1,13 @@
+{
+	"typename" : "blog_type",
+	"fields" : {
+	    "creator" : "<string|<UCWID>>",
+	    "email" : "<string|<e-mail>[5,256]>",
+	    "title" : "<string|[1,256]>",
+	    "subject" : "<string|[1,256]>",
+	    "keys" : ["<token>"],
+	    "txt_full" : "<string>"
+	},
+	"inherit" : "none",
+	"role" : "base"
+}
