@@ -1,3 +1,3 @@
-let {Link_package} = require('./js-src/link_package.js')
+let {Link_package} = require('./js-src/link_meta.js')
 
 module.exports = Link_package

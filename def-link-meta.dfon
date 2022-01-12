@@ -11,8 +11,8 @@ fields : #{
 inherit : none
 role : base
 
-Def:> file(def-${typename})       // def-link_package.json
-typename : link_package
+Def:> file(def-${typename})       // def-link_meta.json
+typename : link_meta
 fields : #{
     presentation : <string|<media-specifier>>
     links : [<string|<URL>>]

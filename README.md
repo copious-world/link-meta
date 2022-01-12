@@ -1,12 +1,12 @@
-# link-package
+# link-meta
 
- Definition of a blog media type.
+Definition of a blog media type.
 
 ## Scope 
 
-A **Link Package** is a data type, a kind of blog media type.
+A **Link Meta** is a data type, a kind of blog media type.
 
-This document serves the purpose of defining a **Link Package** and a means by which it may be introduced into programming languages for use.
+This document serves the purpose of defining a **Link Meta** and a means by which it may be introduced into programming languages for use.
 
 This repository may include code and methods for including the package in dependent programs.
 
@@ -14,7 +14,7 @@ This repository may include code and methods for including the package in depend
 
 A blog media type is a type of media along with a meta description of the media rendered/stored as a type.
 
-A link-package is an instance of a blog-type
+A link-meta is an instance of a blog-type
 
 ## Definition Origination
 
@@ -38,19 +38,19 @@ role : base
 
 ```
 
-## *definition:* link\_package 
+## *definition:* link\_meta 
 
-The following is the **dfon** definition of a the *link-package* blog media type:
+The following is the **dfon** definition of a the *link-meta* blog media type:
 
 
 ```
-Def:> file(def-${typename})       // def-link_package.json
-typename : link_package
+Def:> file(def-${typename})       // def-link_meta.json
+typename : link_meta
 fields : #{
     presentation : <string|<media-specifier>>
     links : [<string|<URL>>]
-    link_map : { <token> : <string|<URL>> }             // A token provides an binding hint... instantiators use for injesting a link package
-    reverse_link_map : { <string|<URL>> : <token> }     // link package managers may search for a token in a binding given a link as a key...
+    link_map : { <token> : <string|<URL>> }             // A token provides an binding hint... instantiators use for injesting a link meta
+    reverse_link_map : { <string|<URL>> : <token> }     // link meta managers may search for a token in a binding given a link as a key...
 }
 inherit : blog_type
 role : impl
@@ -63,7 +63,7 @@ role : impl
 ## NPM Installation
 
 ```
-npm install link-package
+npm install link-meta
 ```
 
 ### <u>use</u>
@@ -71,14 +71,14 @@ npm install link-package
 Use in a node.js JavaScript program.
 
 ```
-// Import the link package class
-const Link_package = require('link-package')
+// Import the link meta class
+const Link_meta = require('link-meta')
 
 // create a new instance of the class (default values)
-let a_link_package = new Link_package()
+let a_link_meta = new Link_meta()
 
 // Set specific fields
-a_link_package.set_from_map({
+a_link_meta.set_from_map({
 	"creator" : "the creator person",
 	"email" : "creator@create.org"
 })
@@ -86,25 +86,25 @@ a_link_package.set_from_map({
 
 // set values throught the code
 
-a_link_package.title = "My Latest Opus"
+a_link_meta.title = "My Latest Opus"
 
 // get values throughout the code 
-let edit_title = a_link_package.title
+let edit_title = a_link_meta.title
 
 // set a map value
 
-a_link_package.set_link_map("that_link_id","https://linked.to/this/stuff")
+a_link_meta.set_link_map("that_link_id","https://linked.to/this/stuff")
 
 // get a map value 
-let what_is_that_url = a_link_package.get_link_map("that_link_id")
+let what_is_that_url = a_link_meta.get_link_map("that_link_id")
 
 // delete key-value pair
-a_link_package.del_link_map("that_link_id")
+a_link_meta.del_link_map("that_link_id")
 
 // Array operations
 
-a_link_package.push_links("https://linked.to/this/stuff")
-a_link_package.pop_links()
+a_link_meta.push_links("https://linked.to/this/stuff")
+a_link_meta.pop_links()
 
 
 ```

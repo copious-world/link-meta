@@ -1,7 +1,7 @@
 
 const {Blog_type} = require('./blog_type')
 //
-class Link_package extends Blog_type {
+class Link_meta extends Blog_type {
     constructor() {
         super()
         this._presentation = ""
@@ -130,4 +130,4 @@ class Link_package extends Blog_type {
 
 }
 //
-module.exports.Link_package = Link_package
+module.exports.Link_meta = Link_meta

@@ -1,7 +1,7 @@
 
-import Blog_type from 'blog_type.mjs'
+import {Blog_type} from './blog_type.mjs'
 //
-export class Link_package extends Blog_type {
+export class Link_meta extends Blog_type {
     constructor() {
         super()
         this._presentation = ""

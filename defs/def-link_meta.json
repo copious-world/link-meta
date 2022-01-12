@@ -1,5 +1,5 @@
 {
-	"typename" : "link_package",
+	"typename" : "link_meta",
 	"fields" : {
 	    "presentation" : "<string|<media-specifier>>",
 	    "links" : ["<string|<URL>>"],
