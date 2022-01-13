@@ -1,9 +1,9 @@
 
 
-let Link_package = require('../index.js')
+let Link_meta = require('../index.js')
 
 
-let lp = new Link_package()
+let lp = new Link_meta()
 
 console.log(lp.title)
 
